@@ -5,7 +5,8 @@ The project focuses on clean architecture, UX polish, and real-world mobile engi
 
 📸 Preview
 
-(Attach demo video / screenshots here)
+
+
 
 ✨ Key Highlights
 
