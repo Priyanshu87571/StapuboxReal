@@ -1,60 +1,64 @@
-Stapubox OTP Login – React Native Assignment
+Stapubox OTP Authentication – React Native (Android)
 
-This project is a 3-screen React Native Android application that implements mobile number login via OTP using the Stapubox APIs.
+A production-style mobile authentication flow built with React Native implementing OTP-based login using the Stapubox APIs.
+The project focuses on clean architecture, UX polish, and real-world mobile engineering practices.
 
-It follows the assignment requirements closely and is structured like a real production app.
+📸 Preview
 
-🎯 Features Implemented
-✅ Screen 1 – Send OTP
+(Attach demo video / screenshots here)
 
-Indian mobile number input (10 digits)
+✨ Key Highlights
 
-Basic validation (starts with 6–9, length = 10)
+📱 Modern 3-screen authentication flow
 
-Send OTP using Stapubox API
+🔢 4-digit OTP with auto-focus & auto-submit
 
-Loading state & error handling
+⏱ Resend OTP with 60s cooldown timer
 
-Disabled button for invalid input
+🤖 Automatic OTP reading using Android SMS Retriever API
 
-✅ Screen 2 – Verify OTP
+🛡 Robust validation & error handling
 
-4-digit OTP input boxes
+🧱 Scalable, production-style folder structure
 
-Auto focus & auto move to next input
+⚡ Optimized UX with loading states & disabled actions
 
-Auto-submit when all digits are filled
+📦 Ready for APK release build
 
-Resend OTP button with 60s cooldown timer
+🧭 User Flow
 
-Error highlight on invalid OTP
+Enter Mobile Number
 
-"Change number" option to go back
+Indian number validation (10 digits, starts with 6–9)
 
-API integration for:
+Calls Send OTP API
 
 Verify OTP
 
-Resend OTP
+Auto-focus inputs
 
-✅ Screen 3 – Success
+Auto-submit when filled
 
-Simple success confirmation screen after login
+Auto-read SMS on supported devices
 
-✅ Android Behavior
+Resend OTP with timer
 
-Uses SMS Retriever API for automatic OTP reading (Android)
+Error highlighting on failure
 
-Graceful fallback to manual OTP entry if auto-read fails
+Success Screen
+
+Confirms successful authentication
 
 🔌 API Integration
 
-Base URL:
+All APIs are integrated as per assignment spec.
+
+Base URL
 
 https://stapubox.com/trial
 
 
-Endpoints used:
+Endpoints
 
 POST /sendOtp
 
@@ -62,29 +66,33 @@ POST /resendOtp
 
 POST /verifyOtp
 
-Authentication:
+Auth Header
 
 X-Api-Token: trial_XXXXXXXXXXXXXXXXXXXXXXXX
 
 
-Token is configured in:
+Configured in:
+
 src/services/api.js
 
-🗂️ Project Structure
+🏗️ Project Architecture
 StapuboxReal/
 │── android/
 │── ios/
 │── src/
-│   ├── navigation/
-│   ├── screens/
-│   ├── components/
-│   ├── services/
-│   ├── utils/
-│   └── constants/
+│   ├── navigation/     # App navigation
+│   ├── screens/        # Screen-level components
+│   ├── components/     # Reusable UI components
+│   ├── services/       # API layer
+│   ├── utils/          # Helpers (validation, timer)
+│   └── constants/      # Theme & constants
 │
 │── App.js
 │── package.json
 │── README.md
+
+
+This structure is designed to scale cleanly in real production apps.
 
 🛠️ Tech Stack
 
@@ -98,75 +106,67 @@ Android SMS Retriever API
 
 JavaScript
 
-▶️ How to Run (On a machine with Android setup)
-1. Install dependencies
+▶️ Running the Project
+
+Requires Android development environment (Java, Android Studio, SDK, Emulator or device).
+
 npm install
-
-2. Start Metro
 npx react-native start
-
-3. Run on Android (in new terminal)
+# in new terminal
 npx react-native run-android
 
-
-⚠️ Requires:
-
-Java (JDK)
-
-Android Studio
-
-Android SDK
-
-Emulator or real device
-
-📦 Build APK
+📦 Building Release APK
 cd android
 gradlew assembleRelease
 
 
-APK output:
+Output:
 
 android/app/build/outputs/apk/release/app-release.apk
 
-🧪 Testing Notes
+🧪 Quality & UX Considerations
 
-OTP can be auto-read if SMS format supports SMS Retriever API
+Disabled actions during API calls
 
-Manual OTP entry always works as fallback
+Clear loading indicators
 
-Resend OTP is blocked for 60 seconds after each request
+Graceful error states
+
+Fallback to manual OTP if auto-read fails
+
+Defensive input validation
+
+Clean separation of concerns (UI / logic / API)
 
 ⚠️ Known Limitations
 
-Android environment setup is required to run/build APK
+Auto OTP reading depends on SMS format from backend
 
-Auto SMS read depends on SMS format provided by backend
+No persistent login session implemented (by design, out of scope)
 
-Currently no persistent login session
+✅ Assignment Coverage
+Requirement	Status
+Send OTP screen	✅
+Verify OTP screen	✅
+API integration	✅
+Auto OTP submit	✅
+Resend OTP timer	✅
+Validation highlighting	✅
+SMS auto-read	✅
+Modular architecture	✅
+APK ready	✅
+GitHub repo	✅
+🧠 Engineering Decisions
 
-🏆 Assignment Checklist
+React Native CLI chosen for full native API access (SMS Retriever)
 
-✅ Send OTP screen
+Service layer abstraction for API calls
 
-✅ Verify OTP screen
+Reusable OTP input component
 
-✅ API integration (send, verify, resend)
+Separation of concerns for maintainability and testing
 
-✅ Auto OTP submit
-
-✅ Validation errors
-
-✅ Resend timer
-
-✅ Android SMS auto-read
-
-✅ Proper folder structure
-
-✅ Ready for APK build
-
-✅ GitHub repository
-
-📌 Author
+👤 Author
 
 Priyanshu Raj
 GitHub: https://github.com/Priyanshu87571
