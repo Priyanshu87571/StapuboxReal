@@ -11,7 +11,6 @@ The project focuses on clean architecture, UX polish, and real-world mobile engi
 
 
 
-
 ✨ Key Highlights
 
 📱 Modern 3-screen authentication flow
