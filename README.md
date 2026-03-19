@@ -77,6 +77,7 @@ src/services/api.js
 🏗️ Project Architecture
 
 StapuboxReal/
+
 │── android/
 │── ios/
 │── src/
