@@ -67,7 +67,7 @@ POST /verifyOtp
 
 Auth Header
 
-X-Api-Token: trial_XXXXXXXXXXXXXXXXXXXXXXXX
+X-Api-Token: trial_XXXXXXXX
 
 
 Configured in:
