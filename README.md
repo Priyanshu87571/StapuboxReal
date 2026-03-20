@@ -81,8 +81,12 @@ StapuboxReal/
 │── android/
 
 │── ios/
+
 │── src/
-│   ├── navigation/     # App navigation
+
+# App navigation
+│   ├── navigation/ 
+
 │   ├── screens/        # Screen-level components
 │   ├── components/     # Reusable UI components
 │   ├── services/       # API layer
