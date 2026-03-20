@@ -79,6 +79,7 @@ src/services/api.js
 StapuboxReal/
 
 │── android/
+
 │── ios/
 │── src/
 │   ├── navigation/     # App navigation
