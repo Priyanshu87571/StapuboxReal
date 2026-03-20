@@ -85,13 +85,20 @@ StapuboxReal/
 │── src/
 
 # App navigation
-│   ├── navigation/ 
+│   ├── navigation/
 
-│   ├── screens/        # Screen-level components
-│   ├── components/     # Reusable UI components
-│   ├── services/       # API layer
-│   ├── utils/          # Helpers (validation, timer)
-│   └── constants/      # Theme & constants
+# Screen-level components
+│   ├── screens/
+
+ # Reusable UI components
+│   ├── components/
+# Reusable UI components
+│   ├── services/
+# API layer
+│   ├── utils/
+# Helpers (validation, timer)
+│   └── constants/
+# Theme & constants
 │
 │── App.js
 │── package.json
