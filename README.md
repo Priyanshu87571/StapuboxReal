@@ -126,7 +126,7 @@ Requires Android development environment (Java, Android Studio, SDK, Emulator or
 
 npm install
 npx react-native start
-# in new terminal
+# In new terminal
 npx react-native run-android
 
 📦 Building Release APK
