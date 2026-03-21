@@ -1,4 +1,4 @@
-Stapubox OTP Authentication – React Native (Android)
+# Stapubox OTP Authentication – React Native (Android)
 
 A production-style mobile authentication flow built with React Native implementing OTP-based login using the Stapubox APIs.
 The project focuses on clean architecture, UX polish, and real-world mobile engineering practices.
